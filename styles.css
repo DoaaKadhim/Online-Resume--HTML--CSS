@@ -109,32 +109,95 @@ color:white;
 
 .skill {
     margin: 5px 0; /* Space between skills */
+    
 }
 
 .skill-bar {
     background-color: #f0f0f0; /* Background for the skill bar */
-    border-radius: 5px; /* Rounded corners */
-    height: 10px; /* Height of the skill bar */
+    height: 20px; /* Height of the skill bar */
     width: 100%; /* Full width */
+    border-radius: 5px;
+    position: relative; /* Ensure the skill-fill can position elements inside it */
+
+
 }
 
+
 .skill-fill {
-    background-color: #4caf50; /* Green color for filled part */
-    height: 100%; /* Fill height */
-    border-radius: 5px; /* Rounded corners */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Align text to the end of the filled area */
+    color: white; /* Text color for visibility */
+    padding-right: 5px; /* Add some padding for the text */
+    font-weight: bold; /* Make text bold for visibility */
+    height: 100%;
+    border-radius: 5px;
+}
+
+.skill-percent {
+    position: absolute;
+    right: 5px; /* Adjust spacing as needed */
+    font-size: 12px; /* Adjust font size as needed */
+    color: white; /* Color of the text inside the bar */
+}
+
+.skill p {
+    display: flex;
+    align-items: center;
+    font-size: 16px; /* Adjust as needed */
+    margin: 0;
+    padding-left: 20px; /* Space for the square */
+    position: relative;
+}
+
+.skill p::before {
+    content: "";
+    width: 10px; /* Square size */
+    height: 10px;
+    position: absolute;
+    left: 0;
+    border-radius: 2px; /* Optional: make it slightly rounded */
+}
+
+/* Customize colors for each skill */
+.adobe-photoshop::before {
+    background-color: #31a2f2; /* Example: blue */
+}
+
+.adobe-illustrator::before {
+    background-color: lightblue; /* Example: orange */
+}
+
+.adobe-Indesign::before {
+    background-color: lightblue; /* Example: orange */
+}
+.adobe-corel::before {
+    background-color: #ff9a00; /* Example: orange */
+}
+.max::before {
+    background-color: red; /* Example: orange */
+}
+
+.blue-fill{
+    background-color: rgb(31, 113, 185);
+}
+.green-fill{
+    background-color: rgba(128, 206, 11, 0.86);
+}
+
+.yellow-fill {
+    background-color: #FFD700; /* Yellow color */
+}
+
+.red-fill {
+    background-color: #FF4500; /* Red color */
 }
 
 /* Optional styles for percentages */
 .skill-level {
     float: right; /* Align percentage to the right */
     margin-left: 10px; /* Space between skill name and percentage */
-}
-/* Main container styling */
-#main_container {
-    width: 100%;
-    display: flex; /* Use flexbox layout */
-    flex-direction: column; /* Stack sections vertically */
-    font-family: Arial, sans-serif;
 }
 
 /* Flex container for Section 2 and Section 3 */
@@ -153,7 +216,7 @@ color:white;
     border-radius: 8px; /* Optional: rounded corners */
 }
 
-.gray{
+.skill , .gray{
     color: gray;
 }
 .blue-square {
@@ -216,4 +279,66 @@ color:white;
     font-size: 8px; /* Adjust for a small arrowhead */
     position: relative;
     left: -1px; /* Fine-tune position of the arrowhead */
+}
+
+/*---------------------------------*/
+
+.skill {
+    display: flex; /* Use flexbox to align items in a row */
+    align-items: center; /* Center vertically */
+}
+
+.skill-dots-blue {
+    display: inline-flex; /* Ensure this is still inline-flex */
+    align-items: center; /* Center dots vertically */
+    margin-left: 8px; /* Spacing between the text and dots */
+}
+
+.skill-dots-blue .dot {
+    width: 20px; /* Set width */
+    height: 20px; /* Set height */
+    border-radius: 50%; /* Make it circular */
+    background-color: #ddd; /* Default color for empty dots */
+    margin-right: 4px; /* Space between dots */
+}
+
+.skill-dots-blue .dot.filled {
+    background-color: #2196F3; /* Color for filled dots */
+}
+/*---------------*/
+.skill-dots-green {
+    display: inline-flex; /* Ensure this is still inline-flex */
+    align-items: center; /* Center dots vertically */
+    margin-left: 8px; /* Spacing between the text and dots */
+}
+
+.skill-dots-green .dot {
+    width: 20px; /* Set width */
+    height: 20px; /* Set height */
+    border-radius: 50%; /* Make it circular */
+    background-color: #ddd; /* Default color for empty dots */
+    margin-right: 4px; /* Space between dots */
+}
+
+.skill-dots-green .dot.filled {
+    background-color: green; /* Color for filled dots */
+}
+/*---------------*/
+
+.skill-dots-yellow {
+    display: inline-flex; /* Ensure this is still inline-flex */
+    align-items: center; /* Center dots vertically */
+    margin-left: 8px; /* Spacing between the text and dots */
+}
+
+.skill-dots-yellow .dot {
+    width: 20px; /* Set width */
+    height: 20px; /* Set height */
+    border-radius: 50%; /* Make it circular */
+    background-color: #ddd; /* Default color for empty dots */
+    margin-right: 4px; /* Space between dots */
+}
+
+.skill-dots-yellow .dot.filled {
+    background-color: yellow; /* Color for filled dots */
 }
