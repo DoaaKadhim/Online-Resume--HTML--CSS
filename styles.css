@@ -1,0 +1,219 @@
+#main_container {
+    background-color: #000; /* Black background */
+color:white;
+    width: 100%;
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Stack sections vertically */
+    font-family: Arial, sans-serif;
+}
+
+#section1 {
+    display: flex; /* Use flexbox for horizontal layout */
+    margin-bottom: 20px; /* Space between section1 and box3 */
+}
+
+/* Styling for Box 1 (Image, Name, and Title) */
+.box1 {
+    display: flex; /* Enable flexbox */
+    align-items: center; /* Vertically center the content */
+    padding: 20px; /* Add some padding around the content */
+    border: 1px solid #ddd; /* Optional: Border around the box */
+    flex: 1; /* Allow box1 to take equal width */
+}
+
+/* Style for the image */
+.box1 img {
+    width: 100px; /* Adjust the image size */
+    height: 100px;
+    border-radius: 50%; /* Make the image circular */
+    margin-right: 20px; /* Space between image and name/title */
+}
+
+/* Style for the name and title */
+.name-title {
+    display: flex;
+    flex-direction: column; /* Stack name and title vertically */
+}
+
+.box1 h1 {
+    margin: 0px;
+    font-size: 24px;
+}
+
+.box1 h2 {
+    font-size: 18px;
+    margin: 0;
+    color: white;
+}
+
+/* Styling for Box 2 (General Info) */
+.box2 {
+    padding: 20px; /* Add some padding */
+    border: 1px solid #ddd; /* Optional: Border around the box */
+    margin-left: 20px; /* Space between Box 1 and Box 2 */
+    flex: 1; /* Allow box2 to take equal width */
+}
+
+.box2 p {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+/* Styling for Box 3 (Biography) */
+.box3 {
+    margin-top: 20px; /* Added margin to separate from previous sections */
+    border: 1px solid #ddd; /* Optional: Border around the box */
+    padding: 20px; /* Added padding for better layout */
+    color: gray;
+
+}
+
+.box3 h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.box3 p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+/* Styles for Employment and Education Section */
+#employment-education {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd; /* Optional border */
+    border-radius: 5px; /* Optional rounding */
+}
+
+.job, .education {
+    margin-bottom: 15px; /* Space between jobs and education entries */
+}
+
+.job h4, .education h4 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+/* Styles for Skills Section */
+#skills {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd; /* Optional border */
+    border-radius: 5px; /* Optional rounding */
+}
+
+.skill-box {
+    margin-bottom: 20px; /* Space between skill categories */
+}
+
+.skill {
+    margin: 5px 0; /* Space between skills */
+}
+
+.skill-bar {
+    background-color: #f0f0f0; /* Background for the skill bar */
+    border-radius: 5px; /* Rounded corners */
+    height: 10px; /* Height of the skill bar */
+    width: 100%; /* Full width */
+}
+
+.skill-fill {
+    background-color: #4caf50; /* Green color for filled part */
+    height: 100%; /* Fill height */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Optional styles for percentages */
+.skill-level {
+    float: right; /* Align percentage to the right */
+    margin-left: 10px; /* Space between skill name and percentage */
+}
+/* Main container styling */
+#main_container {
+    width: 100%;
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Stack sections vertically */
+    font-family: Arial, sans-serif;
+}
+
+/* Flex container for Section 2 and Section 3 */
+.sections-container {
+    display: flex; /* Use flexbox to arrange child sections side by side */
+    justify-content: space-between; /* Space between sections */
+    width: 100%; /* Full width for the flex container */
+}
+
+/* Section 2 and Section 3 styles */
+.section2, .section3 {
+    flex: 1; /* Allow each section to take equal space */
+    margin: 10px; /* Add some margin between sections */
+    padding: 20px; /* Add padding for inner spacing */
+    border: 1px solid #ccc; /* Optional: add a border */
+    border-radius: 8px; /* Optional: rounded corners */
+}
+
+.gray{
+    color: gray;
+}
+.blue-square {
+    display: inline-block;
+    background-color: rgb(64, 197, 224);
+    width: 20px; /* Adjust size as needed */
+    height: 20px;
+    margin-left: 5px; /* Space between the text and square */
+    color: white; /* Color for the arrow */
+    font-size: 10px; /* Size of the arrow */
+    text-align: center;
+    line-height: 20px; /* Center the arrow inside the square */
+    border-radius: 2px; /* Optional: Adds slight rounding */
+}
+
+.job p {
+    display: flex;
+    align-items: center; /* Align items vertically in the middle */
+    margin: 0; /* Remove extra margin */
+}
+
+.circle-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 12px; /* Circle size */
+    height: 12px;
+    background-color: rgb(64, 197, 224); /* Circle color */
+    border-radius: 50%; /* Make it circular */
+    margin-right: 5px; /* Minimal space between circle and text */
+}
+
+.circle-arrow::after {
+    content: "›"; /* Unicode arrowhead */
+    color: white; /* Arrow color */
+    font-size: 8px; /* Adjust for a small arrowhead */
+    position: relative;
+    left: -1px; /* Fine-tune position of the arrowhead */
+}
+
+.gray {
+    color: lightgray;
+    margin-left: 10px; /* Add a small margin to separate from the job title */
+}
+
+.arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 12px; /* Circle size */
+    height: 12px;
+    background-color: green;
+    border-radius: 50%; /* Make it circular */
+    margin-right: 5px; /* Fine-tune for minimal space */
+}
+
+.arrow::after {
+    content: "›"; /* Unicode arrowhead */
+    color: white; /* Arrow color */
+    font-size: 8px; /* Adjust for a small arrowhead */
+    position: relative;
+    left: -1px; /* Fine-tune position of the arrowhead */
+}
